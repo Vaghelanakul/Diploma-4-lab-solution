@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            height: 97vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        div {
+            height: auto;
+            width: 500px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <h1>Student Registration Form</h1>
+
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Email" required>
+
+            <label>Mobile No:</label>
+            <input type="tel" name="number" placeholder="Phone Number" required>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+
+            <br><br>
+
+            <label>Semester:</label>
+            <select>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+                <option value="5th">5th</option>
+                <option value="6th">6th</option>
+            </select>
+
+            <label>Branch:</label>
+            <select>
+                <option value="ce">CE</option>
+                <option value="bsc">BSC</option>
+                <option value="bca">BCA</option>
+                <option value="btech">BTech</option>
+            </select>
+
+            <label>Address:</label>
+            <textarea maxlength="2000"></textarea>
+
+            <label>Hobbies:</label>
+            <input type="checkbox" name="music"> Music
+            <input type="checkbox" name="reading"> Reading
+            <input type="checkbox" name="painting"> Painting
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
