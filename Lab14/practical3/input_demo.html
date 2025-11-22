@@ -1,0 +1,47 @@
+<!-- Create form with all input types and retrieve data in controller page using following Method: GET, POST, and REQUEST. (C) 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="controller.php" method="post">
+        <label for="text">Text Input:</label>
+        <input type="text" name="text"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email"><br><br>
+
+        <label for="number">Number:</label>
+        <input type="number" name="number"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date"><br><br>
+
+        <label for="checkbox">Checkbox:</label>
+        <input type="checkbox" name="checkbox[]" value="reading">hobby 1
+        <input type="checkbox" name="checkbox[]" value="music">hobby 2
+        <input type="checkbox" name="checkbox[]" value="gaming">hobby 3<br><br>
+
+        <label for='range'>Range:</label>
+        <input type="range" name="range" min="0" max="100"><br><br>
+
+        <label for="radio">Radio Buttons:</label>
+        <input type="radio" name="radio" value="option1"> Option 1
+        <input type="radio" name="radio" value="option2"> Option 2<br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>
