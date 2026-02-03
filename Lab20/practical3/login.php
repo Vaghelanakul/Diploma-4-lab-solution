@@ -20,10 +20,12 @@ session_start();
     if (isset($_POST['submit'])) {
         $uname = "Admin";
         $psw = "admin123";
+        $username = $_POST['name'];
+        $password = $_POST['psw'];
         if ($_POST['name'] == $uname && $_POST['psw'] == $psw) {
-            $_SESSION['uname'] = $_POST['name'];
-            $_SESSION['password'] = $_POST['psw'];
-            header("Location : dashboard.php");
+            $_SESSION['uname'] = $username;
+            $_SESSION['password'] = $password;
+            header("Location: dashboard.php");
         } else {
             echo "incorrect";
         }
