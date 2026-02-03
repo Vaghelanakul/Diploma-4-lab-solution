@@ -2,14 +2,14 @@
 $uploadDir = "server_uploaded_files/";
 $profileImage = $uploadDir . "profile.jpg";
 
-/* CREATE FOLDER IF NOT EXISTS */
+/* Create folder if not exists */
 if (!is_dir($uploadDir)) {
     mkdir($uploadDir);
 }
 
-/* HANDLE FORM SUBMISSION */
-if (isset($_POST['submit'])) {
-    $tmpName = $_FILES['profile_picture']['tmp_name'];
+/* Handle form submission */
+if (isset($_POST['upload'])) {
+    $tmpName = $_FILES['photo']['tmp_name'];
     move_uploaded_file($tmpName, $profileImage);
 }
 ?>
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 
     <h2>My Profile</h2>
 
-    <!-- SHOW DEFAULT IMAGE IF PROFILE IMAGE NOT EXISTS -->
+    <!-- Show profile picture -->
     <?php
     if (file_exists($profileImage)) {
         echo "<img src='$profileImage'>";
@@ -51,8 +51,8 @@ if (isset($_POST['submit'])) {
     <br><br>
 
     <form method="post" enctype="multipart/form-data">
-        <input type="file" name="profile_picture" required><br><br>
-        <input type="submit" name="submit" value="Change Picture">
+        <input type="file" name="photo" required><br><br>
+        <input type="submit" name="upload" value="Change Picture">
     </form>
 
 </body>

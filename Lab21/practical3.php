@@ -1,13 +1,16 @@
 <?php
+// same
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "demoDB";
+// different
+$dbname = "diploma_demo";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn)
-    die("Connection failed: " . mysqli_connect_error());
-echo "Connected successfully<br>";
+if ($conn)
+    echo "Connected successfully<br>";
+else
+    echo mysqli_error($conn);
 
 
 

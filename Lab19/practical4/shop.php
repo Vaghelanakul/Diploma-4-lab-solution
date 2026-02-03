@@ -16,13 +16,13 @@ redirect user to bill page that will show the detailed bill using COOKIES. (C) -
     <h1>Shop Page</h1>
     <form method="post">
         <label for="item1">Item 1 :10 </label>
-        <input type="number" id="item1" name="item1" value="1" min="1"><br><br>
+        <input type="number" id="item1" name="item1" min="0"><br><br>
 
         <label for="item2">Item 2 :20 </label>
-        <input type="number" id="item2" name="item2" value="1" min="1"><br><br>
+        <input type="number" id="item2" name="item2" min="0"><br><br>
 
         <label for="item3">Item 3 :30 </label>
-        <input type="number" id="item3" name="item3" value="1" min="1"><br><br>
+        <input type="number" id="item3" name="item3" min="0"><br><br>
 
         <input type="submit" value="Purchase" name="submit">
     </form>
@@ -30,9 +30,9 @@ redirect user to bill page that will show the detailed bill using COOKIES. (C) -
 
     <?php
     if (isset($_POST['submit'])) {
-        $item1 = isset($_POST['item1']) ? (int) $_POST['item1'] : 1;
-        $item2 = isset($_POST['item2']) ? (int) $_POST['item2'] : 1;
-        $item3 = isset($_POST['item3']) ? (int) $_POST['item3'] : 1;
+        $item1 = isset($_POST['item1']) ? (int) $_POST['item1'] : 0;
+        $item2 = isset($_POST['item2']) ? (int) $_POST['item2'] : 0;
+        $item3 = isset($_POST['item3']) ? (int) $_POST['item3'] : 0;
 
         setcookie('item1', $item1, time() + 3600);
         setcookie('item2', $item2, time() + 3600);

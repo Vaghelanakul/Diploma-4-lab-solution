@@ -2,16 +2,17 @@
 
 <?php
 
-    $cookie = setcookie("username","abc",time()+3600);
-    if($cookie){
-        echo "Cookie 'username' is set successfully.";
-        echo "<br>";
-        echo "Value of cookie 'username' is: ".$_COOKIE["username"];
-    }
-    else
-        echo "Failed to set cookie 'username'.";
+// setcookie('demo','demoValue',time()+3600,"/","",false,true);
 
-    
+$cookie = setcookie("username", "abc", time() + 3600);
+if ($cookie) {
+    echo "Cookie 'username' is set successfully.";
+    echo "<br>";
+    echo "Value of cookie 'username' is: " . $_COOKIE["username"];
+} else
+    echo "Failed to set cookie 'username'.";
+
+
 
 
 

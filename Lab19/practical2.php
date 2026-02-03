@@ -2,12 +2,12 @@
 -->
 <?php
 
-    if(isset($_COOKIE['visit_count']))
-        $visitCount= $_COOKIE['visit_count']+1;
-    else
-        $visitCount=1;
+if (isset($_COOKIE['visit_count']))
+    $visitCount = $_COOKIE['visit_count'] + 1;
+else
+    $visitCount = 1;
 
-    setcookie("visit_count",$visitCount,time()+3600);
+setcookie("visit_count", $visitCount, time() + 3600);
 
-    echo "You have visited this page ".$visitCount." time(s).";
+echo "You have visited this page " . $visitCount . " time(s).";
 ?>

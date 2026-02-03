@@ -1,4 +1,4 @@
-<!-- Write a program to sort given array in descending order without using inbuilt function. (C) -->
+ <!-- Write a program to sort given array in descending order without using inbuilt function. (C) -->
 
 <?php
     $arr=[5,3,8,1,2,7];

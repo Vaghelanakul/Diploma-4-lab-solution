@@ -2,17 +2,21 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Include and Require Demo</title>
 </head>
+
 <body>
 
     <!-- Include Header -->
 
-    
-    <?php include 'header.php'; ?>
+
+    <?php
+    include 'header1.php';
+    ?>
 
     <!-- Main Content -->
     <div>
@@ -28,7 +32,7 @@
         <!-- Missing File with Include -->
         <?php
         echo "<h3>Using include for a missing file:</h3>";
-        include 'missing_file.php'; // Will generate a warning but continue execution
+        // include 'missing_file.php'; // Will generate a warning but continue execution
         ?>
 
         <!-- Missing File with Require -->
@@ -39,7 +43,8 @@
     </div>
 
     <!-- Include Footer -->
-    <?php require_once 'footer.php'; ?>
+    <?php require 'foote.php'; ?>
 
 </body>
+
 </html>
