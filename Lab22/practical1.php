@@ -17,7 +17,7 @@ if ($con) {
         echo "Error inserting record:<br>" . mysqli_error($con);
 
     $selectQuery = "SELECT * FROM student_detail";
-    $result = mysqli_query($con, $selectQuery);
+    $result = mysqli_query($con, "select * from student_detail");
     if ($result) {
         while ($arr = mysqli_fetch_array($result)) {
             echo "ID: " . $arr['id'] . " Name: " . $arr['name'] . " Enrollment No: " . $arr['enrollmentNo'] . " Class: " . $arr['class'] . "<br>";

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="insert.php" method="post">
+        Name:<input type="text" name="name" required><br><br>
+        Email:<input type="email" name="email" required><br><br>
+        Salary:<input type="text" name="salary" required><br><br>
+        Gender: Male<input type="radio" name="gender" value="Male">
+        Female<input type="radio" name="gender" value="Female"><br><br>
+        Skills:
+        PHP<input type="checkbox" name="skills[]" value="php">
+        JAVA<input type="checkbox" name="skills[]" value="java">
+        Python<input type="checkbox" name="skills[]" value="python"><br><br>
+
+        <input type="submit" value="submit" name="submit">
+
+    </form>
+</body>
+
+</html>
