@@ -6,6 +6,16 @@ if (!isset($_POST['submit'])) {
 
 $con = mysqli_connect("localhost", "root", "", "demodb");
 
+// table structure  
+
+// CREATE TABLE employee (
+//     id INT AUTO_INCREMENT PRIMARY KEY,
+//     name VARCHAR(100),
+//     email VARCHAR(100),
+//     gender VARCHAR(20),
+//     skills VARCHAR(255)
+// );
+
 
 if ($con) {
     $name = $_POST['name'];

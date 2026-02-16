@@ -1,5 +1,5 @@
 <?php
-if (!isset($_id)) {
+if (!isset($_GET['id'])) {
     header("Location:show.php");
 }
 
@@ -28,7 +28,7 @@ $skills_array = explode(',', $row['skills']);
         Salary:<input type="text" name="salary" value="<?php echo $row['salary'] ?>"><br><br>
         Gender:
         Male
-        <input type="radio" name="gender" value="male" <?php if ($row['gender'] == 'Male')
+        <input type="radio" name="gender" value="Male" <?php if ($row['gender'] == 'Male')
             echo "Checked" ?>>
 
             Female
@@ -67,7 +67,7 @@ $skills_array = explode(',', $row['skills']);
 
             if ($r) {
 
-                echo "<script>alert('Data updated successfully');";
+                echo "<script>alert('Data Deleted successfully');";
                 echo "window.location.href='show.php';</script>";
             } else {
                 echo "data not updated" . mysqli_error($con);
